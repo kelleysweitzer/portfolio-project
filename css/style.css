@@ -47,29 +47,42 @@ footer{
 
 .signs-grid{
   display:grid;
-  grid-template-columns: 5;
-  grid-template-rows:2;
-  row-gap: 50px;
-  border: 2px solid black;
-
+  grid-template-columns: 5em auto 9em;
+  grid-template-rows: 12;
+  row-gap: 5em;
+  margin: 5em;
 }
 
+.cap-image > img, .aqua-image > img, .pisces-image > img, 
+.aires-image > img, .taurus-image > img, .gemini-image > img,
+.cancer-image > img, .leo-image > img, .libra-image > img,
+.virgo-image > img, .scorpio-image > img, .sagittarius-image > img {
+ 
+  grid-column: 1 / 1;
+  max-width: 5em;
+  max-height: auto;
+  align-content: center;
+}
 
-
-.cap-text, .aqua-text, .pisces-text, .aires-text, .taurus-text, .gemini-text, .cancer-text{
-  grid-column: 2 / 4;
+.cap-text, .aqua-text, .pisces-text, .aires-text, .taurus-text, .gemini-text, .cancer-text, .leo-text, .libra-text, .virgo-text, .scorpio-text, .sagittarius-text{
+  grid-column: 2 / 2;
+  padding-left: 5rem;
+  /* display: inline; */
   text-align: left;
 }
 
-.cap-dates, .aqua-dates, .pisces-dates, .aires-dates, .taurus-dates, .gemini-dates, .cancer-dates {
-  grid-column: 4 / 5;
-  text-align: right;
+.cap-text > h3, .aqua-text > h3, .pisces-text > h3, 
+.aires-text > h3, .taurus-text > h3, .gemini-text > h3,
+.cancer-text > h3, .leo-text > h3, .libra-text > h3, 
+.virgo-text > h3, .scorpio-text > h3, .sagittarius-text > h3{
+  font-size: 5rem;
 }
 
-.cap-image, .aqua-image, .pisces-image, .aires-image, .taurus-image, .gemini-image, .cancer-image {
-  grid-column: 1 / 1;
-  object-fit: fill;
-  max-height: 20px;
-  max-width: 20px;
-  overflow: hidden;
+.cap-dates, .aqua-dates, .pisces-dates, .aires-dates, .taurus-dates, .gemini-dates, .cancer-dates, .leo-dates, .libra-dates, .virgo-dates, .scorpio-dates, .sagittarius-dates {
+  grid-column: 3 / 3;
+  text-align: left;
+  font-style: italic;
+  margin-top: auto ;
+  margin-bottom: auto;
 }
+
