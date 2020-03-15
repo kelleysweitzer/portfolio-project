@@ -1,5 +1,5 @@
 body{
-  font-family: 'Raleway', sans-serif; /* Test for this*/
+  font-family: 'Josefin Sans', sans-serif; /* Test for this*/
   margin: 0;
   padding: 0;
   font-size: 16pt; /* test for this! Make all sizes em or rem */
@@ -49,21 +49,27 @@ footer{
   display:grid;
   grid-template-columns: 5;
   grid-template-rows:2;
-  row-gap: 50px
+  row-gap: 50px;
   border: 2px solid black;
 
 }
 
 
 
-.cap-text, .aqua-text {
-  grid-column: 2 / 5;
+.cap-text, .aqua-text, .pisces-text, .aires-text, .taurus-text, .gemini-text, .cancer-text{
+  grid-column: 2 / 4;
   text-align: left;
 }
 
-.cap-image, .aqua-image{
+.cap-dates, .aqua-dates, .pisces-dates, .aires-dates, .taurus-dates, .gemini-dates, .cancer-dates {
+  grid-column: 4 / 5;
+  text-align: right;
+}
+
+.cap-image, .aqua-image, .pisces-image, .aires-image, .taurus-image, .gemini-image, .cancer-image {
   grid-column: 1 / 1;
+  object-fit: fill;
   max-height: 20px;
   max-width: 20px;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
