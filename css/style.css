@@ -11,7 +11,7 @@ body{
 }
 
 h1{
-  font-size: 2em;
+  font-size: 3em;
   text-align: center;
   line-height: 2;
 }
@@ -49,33 +49,42 @@ footer{
   top: 0px;
 }
 
+header {
+  background: black;
+}
+
 nav a, nav a:active, nav a:visited{
-  color: black;
+  color: white;
 }
 
 nav a:hover, nav a:focus{
-  text-shadow: 0 0 2px #fff, 0 0 6px #fff, 0 0 8px #e60073, 0 0 10px #e60073, 0 0 20px #e60073;
+  text-shadow: 0 0 2px rgb(215, 234, 255), 0 0 6px rgb(215, 234, 255), 0 0 8px rgb(215, 234, 255), 0 0 10px rgb(215, 234, 255), 0 0 20px rgb(215, 234, 255);
   animation: glow;
   transition: 0.5s;
 }
 
+footer a, footer:active, footer:visited{
+  color:white
+
+}
+
 nav ul{
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto;
   margin: 1em;
 }
 
 nav li{
-  display:inline;
-  padding-right:20px;
+  padding-bottom: 1.5em;
   text-align:  center;
-
-
 }
 
-ul > a.active-page{
-  color: white;
-  background-color: fuchsia;
+#current-page{
+  color: black;
+  background-color: rgb(215, 234, 255);
+  text-shadow: black;
+  padding: 8px;
+  border: 2px solid rgb(1, 1, 131);
 }
 
 
@@ -94,7 +103,7 @@ ul > a.active-page{
 
 .signs-grid{
   display:grid;
-  grid-template-columns: auto;
+  grid-template-columns: 1;
   grid-template-rows: 12;
   row-gap: 5em;
   /* margin: 5em; */
@@ -104,13 +113,13 @@ ul > a.active-page{
 .aires-image > img, .taurus-image > img, .gemini-image > img,
 .cancer-image > img, .leo-image > img, .libra-image > img,
 .virgo-image > img, .scorpio-image > img, .sagittarius-image > img {
- 
+ display:inline-block;
   grid-column: 1 / 1;
   max-width: 5em;
   max-height: auto;
   margin-left: auto;
   margin-right: auto;
-  align-self: center;
+  align-content: center;
 }
 
 .cap-text, .aqua-text, .pisces-text, .aires-text, .taurus-text, .gemini-text, .cancer-text, .leo-text, .libra-text, .virgo-text, .scorpio-text, .sagittarius-text{
@@ -124,7 +133,7 @@ ul > a.active-page{
 .aires-text > h3, .taurus-text > h3, .gemini-text > h3,
 .cancer-text > h3, .leo-text > h3, .libra-text > h3, 
 .virgo-text > h3, .scorpio-text > h3, .sagittarius-text > h3{
-  font-size: 5rem;
+  font-size: 3rem;
 }
 
 .cap-dates, .aqua-dates, .pisces-dates, .aires-dates, .taurus-dates, .gemini-dates, .cancer-dates, .leo-dates, .libra-dates, .virgo-dates, .scorpio-dates, .sagittarius-dates {
@@ -159,12 +168,12 @@ ul > a.active-page{
 }
 
 .paragraph1, .paragraph2, .signs-list, .paragraph3, .paragraph4, .paragraph5 {
-  padding-bottom: 1em;
+  padding-bottom: 2em;
   padding-top: 1em;
   /* background-color:black; */
   /* color:white; */
-  margin-left: 3em;
-  margin-right: 3em;
+  margin-left: 8em;
+  margin-right: 8em;
 }
 
 
@@ -173,6 +182,18 @@ ul > a.active-page{
 /* Tablet Mode */
 @media all and (min-width: 600px){
 
+  nav ul{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 1em;
+  }
+  
+  nav li{
+    display:inline;
+    /* padding-right; */
+    text-align:  center;
+  }
+  
 /* Grid Components */
 
 .signs-grid{
@@ -204,7 +225,7 @@ ul > a.active-page{
 .aires-text > h3, .taurus-text > h3, .gemini-text > h3,
 .cancer-text > h3, .leo-text > h3, .libra-text > h3, 
 .virgo-text > h3, .scorpio-text > h3, .sagittarius-text > h3{
-  font-size: 5rem;
+  font-size: 1em;
 }
 
 .cap-dates, .aqua-dates, .pisces-dates, .aires-dates, .taurus-dates, .gemini-dates, .cancer-dates, .leo-dates, .libra-dates, .virgo-dates, .scorpio-dates, .sagittarius-dates {
@@ -243,6 +264,18 @@ ul > a.active-page{
 /* Desktop Mode  */
 @media all and (min-width: 800px){
 
+  nav ul{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin: 1em;
+  }
+  
+  nav li{
+    display:inline;
+    padding-right:20px;
+    text-align:  center;
+  }
+  
 /* Grid Components */
 
 .signs-grid{
@@ -275,7 +308,7 @@ ul > a.active-page{
 .aires-text > h3, .taurus-text > h3, .gemini-text > h3,
 .cancer-text > h3, .leo-text > h3, .libra-text > h3, 
 .virgo-text > h3, .scorpio-text > h3, .sagittarius-text > h3{
-  font-size: 5rem;
+  font-size: 3rem;
 }
 
 .cap-dates, .aqua-dates, .pisces-dates, .aires-dates, .taurus-dates, .gemini-dates, .cancer-dates, .leo-dates, .libra-dates, .virgo-dates, .scorpio-dates, .sagittarius-dates {
