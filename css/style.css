@@ -1,3 +1,7 @@
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   font-family: 'Josefin Sans', sans-serif; /* Test for this*/
   margin: 0;
@@ -19,7 +23,7 @@ h2{
 }
 
 p {
-  padding: 0 30px;
+  padding: 0em 1em 1em 1em;
 }
 
 footer{
@@ -29,12 +33,21 @@ footer{
   text-align: center;
 }
 
-  /* Navbar */
- 
-/* header{
-  background-color: black;
-  color: white;
-} */
+
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+  position: relative;
+  top: -40px;
+}
+
+.skip a:focus{
+  top: 0px;
+}
 
 nav a, nav a:active, nav a:visited{
   color: black;
@@ -42,7 +55,6 @@ nav a, nav a:active, nav a:visited{
 
 nav a:hover, nav a:focus{
   text-shadow: 0 0 2px #fff, 0 0 6px #fff, 0 0 8px #e60073, 0 0 10px #e60073, 0 0 20px #e60073;
-
   animation: glow;
   transition: 0.5s;
 }
@@ -67,6 +79,169 @@ ul > a.active-page{
 }
 
 
+.parallax{
+  background-image: url(../img/parallax1.jpg);
+  height: 100px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+
+/* Grid Components */
+
+.signs-grid{
+  display:grid;
+  grid-template-columns: auto;
+  grid-template-rows: 12;
+  row-gap: 5em;
+  /* margin: 5em; */
+}
+
+.cap-image > img, .aqua-image > img, .pisces-image > img, 
+.aires-image > img, .taurus-image > img, .gemini-image > img,
+.cancer-image > img, .leo-image > img, .libra-image > img,
+.virgo-image > img, .scorpio-image > img, .sagittarius-image > img {
+ 
+  grid-column: 1 / 1;
+  max-width: 5em;
+  max-height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center;
+}
+
+.cap-text, .aqua-text, .pisces-text, .aires-text, .taurus-text, .gemini-text, .cancer-text, .leo-text, .libra-text, .virgo-text, .scorpio-text, .sagittarius-text{
+  grid-column: 1 / 1;
+  /* padding-left: 5rem; */
+  /* display: inline; */
+  text-align: center;
+}
+
+.cap-text > h3, .aqua-text > h3, .pisces-text > h3, 
+.aires-text > h3, .taurus-text > h3, .gemini-text > h3,
+.cancer-text > h3, .leo-text > h3, .libra-text > h3, 
+.virgo-text > h3, .scorpio-text > h3, .sagittarius-text > h3{
+  font-size: 5rem;
+}
+
+.cap-dates, .aqua-dates, .pisces-dates, .aires-dates, .taurus-dates, .gemini-dates, .cancer-dates, .leo-dates, .libra-dates, .virgo-dates, .scorpio-dates, .sagittarius-dates {
+  grid-column: 1 / 1;
+  text-align: center;
+  font-style: italic;
+  /* margin-top: auto ; */
+  /* margin-bottom: auto; */
+}
+
+.flex {
+  display: flex;
+
+  margin: auto;
+  flex-flow: row wrap;
+  justify-content: center; 
+}
+
+.flex-item {
+  max-width: 30%;
+  max-height: 30%;
+  overflow: hidden;
+  filter: grayscale(100%);
+  
+}
+
+.flex-item:hover {
+  filter: sepia(100%) hue-rotate(120deg) saturate(100%);
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+
+}
+
+.paragraph1, .paragraph2, .signs-list, .paragraph3, .paragraph4, .paragraph5 {
+  padding-bottom: 1em;
+  padding-top: 1em;
+  /* background-color:black; */
+  /* color:white; */
+  margin-left: 3em;
+  margin-right: 3em;
+}
+
+
+
+
+/* Tablet Mode */
+@media all and (min-width: 600px){
+
+/* Grid Components */
+
+.signs-grid{
+  display:grid;
+  grid-template-columns: 5em auto ;
+  grid-template-rows: 12;
+  row-gap: 5em;
+  margin: 5em;
+}
+
+.cap-image > img, .aqua-image > img, .pisces-image > img, 
+.aires-image > img, .taurus-image > img, .gemini-image > img,
+.cancer-image > img, .leo-image > img, .libra-image > img,
+.virgo-image > img, .scorpio-image > img, .sagittarius-image > img {
+ 
+  grid-column: 1 / 1;
+  max-width: 5em;
+  max-height: auto;
+  align-content: center;
+}
+
+.cap-text, .aqua-text, .pisces-text, .aires-text, .taurus-text, .gemini-text, .cancer-text, .leo-text, .libra-text, .virgo-text, .scorpio-text, .sagittarius-text{
+  grid-column: 2 / 2;
+  padding-left: 5rem;
+  text-align: left;
+}
+
+.cap-text > h3, .aqua-text > h3, .pisces-text > h3, 
+.aires-text > h3, .taurus-text > h3, .gemini-text > h3,
+.cancer-text > h3, .leo-text > h3, .libra-text > h3, 
+.virgo-text > h3, .scorpio-text > h3, .sagittarius-text > h3{
+  font-size: 5rem;
+}
+
+.cap-dates, .aqua-dates, .pisces-dates, .aires-dates, .taurus-dates, .gemini-dates, .cancer-dates, .leo-dates, .libra-dates, .virgo-dates, .scorpio-dates, .sagittarius-dates {
+  grid-column: 2 / 2;
+  text-align: left;
+  font-style: italic;
+  padding-left: 5rem;
+}
+
+.flex {
+  display: flex;
+  margin: auto;
+  flex-flow: row wrap;
+  justify-content: center; 
+}
+
+.flex-item {
+  max-width: 30%;
+  max-height: 30%;
+  overflow: hidden;
+  filter: grayscale(100%);
+  
+}
+
+.flex-item:hover {
+  filter: sepia(100%) hue-rotate(120deg) saturate(100%);
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+
+}
+
+
+}
+
+
+/* Desktop Mode  */
+@media all and (min-width: 800px){
 
 /* Grid Components */
 
@@ -114,27 +289,51 @@ ul > a.active-page{
 .flex {
   display: flex;
   margin: auto;
-
   flex-flow: row wrap;
   justify-content: center; 
-
-
 }
-
-
 
 .flex-item {
   max-width: 30%;
   max-height: 30%;
   overflow: hidden;
   filter: grayscale(100%);
+  
+}
+
+.flex-item:hover {
+  filter: sepia(100%) hue-rotate(120deg) saturate(100%);
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+
+}
+
 
 
 }
 
-.flex-item:hover {
-  transition: 1s;
-  filter: sepia(100%) hue-rotate(120deg) saturate(200%);
+
+
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
+
+  .skip a{
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  nav a:hover, nav a:focus{
+    color: black;
+
+  }
+
+
+  .parallax {
+    background-attachment: scroll;
+  }
 
 
 }
