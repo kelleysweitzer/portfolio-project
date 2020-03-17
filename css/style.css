@@ -24,6 +24,7 @@ h2{
 
 p {
   padding: 0em 1em 1em 1em;
+  line-height: 1.5em;
 }
 
 footer{
@@ -51,6 +52,7 @@ footer{
 
 header {
   background: black;
+  box-shadow: 0px 4px 19px 3px #888888;
 }
 
 nav a, nav a:active, nav a:visited{
@@ -154,6 +156,7 @@ nav li{
 .flex-item {
   width: 10em;
   height:10em;
+  
   overflow: hidden;
   filter: grayscale(100%);
   
@@ -175,8 +178,29 @@ nav li{
   margin-right: 8em;
 }
 
+.paragraph5{
+  text-align:center;
 
 
+}
+.hidden-secrets{
+  padding: 4em;
+  text-emphasis-style: italic;
+  text-align: center;
+}
+
+#author-img{
+
+  background-image: url(../img/author.jpg);
+  height: 15em;
+  width: 10em;
+  display: auto;
+  margin-left: auto;
+  margin-right:auto;
+  background-size: cover;
+
+
+}
 
 /* Tablet Mode */
 @media all and (min-width: 600px){
