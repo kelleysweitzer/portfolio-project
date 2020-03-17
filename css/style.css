@@ -6,7 +6,7 @@ body{
   font-family: 'Josefin Sans', sans-serif; /* Test for this*/
   margin: 0;
   padding: 0;
-  font-size: 16pt; /* test for this! Make all sizes em or rem */
+  font-size: 16pt; 
   background-image: url('../images/concrete_seamless.png');
 }
 
@@ -113,7 +113,6 @@ nav li{
 .aires-image > img, .taurus-image > img, .gemini-image > img,
 .cancer-image > img, .leo-image > img, .libra-image > img,
 .virgo-image > img, .scorpio-image > img, .sagittarius-image > img {
- display:inline-block;
   grid-column: 1 / 1;
   max-width: 5em;
   max-height: auto;
@@ -153,8 +152,8 @@ nav li{
 }
 
 .flex-item {
-  max-width: 30%;
-  max-height: 30%;
+  width: 10em;
+  height:10em;
   overflow: hidden;
   filter: grayscale(100%);
   
